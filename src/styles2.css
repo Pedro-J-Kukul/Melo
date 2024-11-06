@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap");
+
+:root {
+  /* Colors */
+  --primary-color: #a2d2df;
+  --secondary-color: #f6efbd;
+  --background-color: #e4c087;
+  --text-color: #bc7c7c;
+
+  /* Fonts */
+  --orbitron: "Orbitron", "Helvetica", Arial, sans-serif;
+
+  /* Font Sizes */
+  --font-large: 3rem;
+  --font-medium: 2rem;
+  --font-small: 1rem;
+
+  /* Spacing */
+  --padding-horizontal: 10rem;
+  --padding-vertical: 2rem;
+
+  /* Border Radius */
+  --border-radius: 10px;
+  --button-radius: 20px;
+
+  /* Shadow */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: var(--orbitron);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+/* Navbar Container */
+.navbar {
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem; /* Adjusted padding for consistent spacing */
+  box-shadow: var(--box-shadow);
+  margin: 0;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: calc(var(--font-large)); /* Slightly reduced for better fit */
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar List Styling */
+.navbar ul {
+  display: flex;
+  gap: 2rem; /* Adjusted gap for better spacing */
+  letter-spacing: 0.1rem; /* Adjusted for readability */
+  list-style: none;
+  margin: 0;
+}
+
+/* Navbar Link Styling */
+.navbar a {
+  color: var(--text-color);
+  font-size: var(--font-small);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: var(--button-radius);
+  display: block; /* Makes the entire area clickable */
+}
+
+/* Hover State with Improved Accessibility */
+.navbar a:hover {
+  background-color: var(
+    --primary-color-light
+  ); /* Slightly lighter color for hover */
+  color: var(
+    --secondary-color-dark
+  ); /* Darker color for readability on hover */
+}
+
+/* Active Link Styling for Highlighting */
+.navbar a.active {
+  background-color: var(--primary-color);
+  color: #fff; /* White text for improved contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    height: 10vh; /* Increase height for better spacing on smaller screens */
+  }
+
+  .navbar-title {
+    font-size: var(--font-medium); /* Adjust font size for smaller screens */
+  }
+
+  .navbar ul {
+    gap: 1rem; /* Closer spacing for smaller screens */
+  }
+
+  .navbar a {
+    font-size: var(--font-small); /* Adjust link size for readability */
+  }
+}
+
+section {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+  border-radius: 20px;
+  margin: 3rem;
+}
+.section-title {
+  font-size: var(--font-medium);
+  margin: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+/* Section Content: Flexbox to align display and text side by side */
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  height: 60vh;
+  max-width: 1200px;
+  margin: 3rem auto; /* Center content */
+}
+
+/* Display Column (for video or image) */
+.section-display {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff8f0; /* Light background */
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.section-display iframe {
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around video */
+}
+
+.section-display iframe {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  box-shadow: var(--box-shadow);
+}
+
+/* Text Column with Blurred Background */
+.section-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(255, 244, 230, 0.8); /* Semi-transparent */
+  backdrop-filter: blur(8px); /* Blurred background */
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+}

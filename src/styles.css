@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap");
+
+/* Reset styles for cross-browser consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: "Orbitron", "Helvetica", Arial, sans-serif;
+  background-color: #fff8f0; /* Light peachy background */
+  color: #4a4a4a; /* Soft gray for text */
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Enables smooth scrolling between sections */
+}
+/* Sticky Navbar */
+.navbar {
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 244, 230, 0.9); /* Light, translucent peach */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Align h1 on left, nav on right */
+  align-items: center;
+  padding: 1rem 10rem; /* Added horizontal padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 0 0 10px 10px; /* Rounded bottom for marshmallow look */
+}
+
+/* Navbar Title Styling */
+.navbar-title {
+  font-size: 3rem;
+  color: #ffb3a7; /* Soft peachy-pink color */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar List */
+.navbar ul {
+  display: flex;
+  gap: 3rem;
+  letter-spacing: 0.2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar a {
+  color: #ffb3a7; /* Soft peachy-pink */
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 20px; /* Rounded links */
+}
+
+.navbar a:hover {
+  background-color: #ffdecc; /* Light peach on hover */
+  color: #4a4a4a;
+} /* Active link styling */
+.navbar a.active {
+  background-color: #ffb3a7; /* Highlighted soft peach */
+  color: #fff;
+}
+
+/* Full-screen slide styling */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
+  color: #4a4a4a; /* Default text color */
+  border-radius: 20px;
+}
+
+/* Individual section colors for a soft, marshmallow theme */
+.hero-section {
+  display: flex;
+  justify-content: center; /* Centers content horizontally within the section */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #ffe5dc; /* Peach background */
+}
+.hero-section div {
+  flex: 1; /* Each div takes up equal space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around video */
+}
+
+/* Styling for Information Section */
+.video-description,
+.button {
+  text-align: center;
+  font-size: 1.2rem; /* Increase font size */
+}
+
+.video-description {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: #ffb3a7;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff8c7a; /* Slightly darker on hover */
+}
+
+/* Darker background for description area */
+.hero-section div:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.05); /* Light gray/peach background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-section div {
+    width: 100%;
+  }
+}
+.about-section {
+  background-color: #ffebcc; /* Soft yellow */
+}
+
+.team-section {
+  background-color: #d8eaff; /* Soft blue */
+}
+
+.documentation-section {
+  background-color: #ffccff; /* Light pastel pink */
+}
+
+.conclusion-section {
+  background-color: #ffe6e6; /* Light pink */
+}
+
+/* Button styling for prototype link */
+.button {
+  background-color: #ffd966; /* Soft yellow */
+  color: #4a4a4a;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffb84d; /* Slightly darker yellow on hover */
+}
+
+/* Team carousel styling */
+.carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  width: 80%;
+  padding: 1rem 0;
+}
+
+.carousel-item {
+  min-width: 200px;
+  max-width: 200px;
+  text-align: center;
+  background-color: #ffebcc;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for marshmallow effect */
+}
+
+/* Documentation tabs styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tab-button {
+  background-color: #ffdecc;
+  color: #4a4a4a;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button:focus {
+  background-color: #ffccff; /* Light pastel pink on hover */
+}
+
+/* Tab content display styling */
+.tab-content {
+  display: none;
+  color: #4a4a4a;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff8f0;
+}
+
+/* Display the first tab by default */
+#prototypes {
+  display: block;
+}
+
+/* Smooth scrolling between sections */
+html,
+body {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
