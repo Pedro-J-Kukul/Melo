@@ -8,17 +8,19 @@
     <script src="src/scripts.js"></script>
   </head>
   <body>
-    <nav class="navbar">
+    <header class="header">
       <h1 class="navbar-title">Melo</h1>
-      <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-      </ul>
-    </nav>
-    <section id="introduction">
-      <h2 class="section-title">Introduction</h2>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Introduction -->
+    <section id="introduction" class="section">
       <div class="section-content">
         <div class="section-display">
           <iframe
@@ -32,74 +34,221 @@
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+          <div class="section-text">
+            <h2>A New and Improved Transfer matrix</h2>
+            <p>Melo has designed a new and improved Transfer Matrix</p>
+            <a href="#" class="button">Prototype</a>
+          </div>
         </div>
-        <div class="section-text">
-          <p class="video-description">Link to our Medium Fidelity Prototype</p>
-          <a href="#" class="button">View Prototype</a>
-        </div>
-      </div>
-    </section>
+        <div class="articles">
+          <div class="article">
+            <h3>Accessability</h3>
+            <p>
+              Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
+              magna a ullamcorper laoreet, lectus arcu.
+            </p>
+          </div>
 
-    <section
-      id="about-us"
-      class="about-section"
-      style="background-image: url('background-image.jpg')"
-    >
-      <div class="text-section">
-        <h2>Mission Statement</h2>
-        <p>
-          Melo is dedicated to improving the usability and accessibility of the
-          University of Belize's transfer matrix, ensuring that students can
-          efficiently navigate and manage their course transfers with ease and
-          confidence.
-        </p>
-        <h2>Value Proposition</h2>
-        <p>
-          Melo provides a simplified and intuitive interface for displaying
-          transfer data at the University of Belize, helping students easily
-          interpret and compare their course options for a smoother academic
-          planning experience.
-        </p>
+          <div class="article">
+            <h3>Readability</h3>
+            <p>
+              Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
+              magna a ullamcorper laoreet, lectus arcu.
+            </p>
+          </div>
+
+          <div class="article">
+            <h3>Aesthetic</h3>
+            <p>
+              Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
+              magna a ullamcorper laoreet, lectus arcu.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="team" class="team-section">
-      <h2>Meet the Team</h2>
-      <div class="carousel">
-        <div class="carousel-item">
-          <img src="team1.jpg" alt="Team Member 1" />
-          <p>Team Member 1 - Description</p>
-        </div>
-        <div class="carousel-item">
-          <img src="team2.jpg" alt="Team Member 2" />
-          <p>Team Member 2 - Description</p>
-        </div>
-        <!-- Repeat for each member -->
+    <!-- About Us -->
+    <section id="about-us" class="section">
+      <div class="section-text">
+        <h2 class="section-title">Mission Statement</h2>
+        <p class="section-description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          quas corrupti inventore voluptatum maxime deserunt, repudiandae
+          aliquid sapiente commodi? Unde nesciunt ullam, fugiat perspiciatis
+          temporibus modi non vero harum eligendi.
+        </p>
+        <a href="#" class="button">Read More</a>
       </div>
     </section>
-    <section id="documentation" class="documentation-section">
+    <!-- Team -->
+    <section id="team" class="section">
+      <div class="section-content">
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="section-display">
+          <div class="member">
+            <img
+              src="/src/images/avatar.jpg"
+              alt="Member1"
+              class="member-image"
+            />
+            <h3 class="member-name">Kelsey Aban</h3>
+            <p class="member-description">Lead Programmer</p>
+          </div>
+          <div class="member">
+            <img
+              src="/src/images/avatar.jpg"
+              alt="Member1"
+              class="member-image"
+            />
+            <h3 class="member-name">Aiyesha Coleman</h3>
+            <p class="member-description">Graphic Designer</p>
+          </div>
+          <div class="member">
+            <img
+              src="/src/images/avatar.jpg"
+              alt="Member1"
+              class="member-image"
+            />
+            <h3 class="member-name">Pedro Kukul</h3>
+            <p class="member-description">Senior Programmer</p>
+          </div>
+          <div class="member">
+            <img
+              src="/src/images/avatar.jpg"
+              alt="Member1"
+              class="member-image"
+            />
+            <h3 class="member-name">Chahiim Pop</h3>
+            <p class="member-description">Project Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="documentation" class="document-section section">
       <h2>Documentation</h2>
       <div class="tabs">
-        <button class="tab-button" onclick="showTab('prototypes')">
+        <button class="tab-button active" onclick="showTab('prototypes')">
           Prototypes
         </button>
         <button class="tab-button" onclick="showTab('reports')">Reports</button>
         <button class="tab-button" onclick="showTab('powerpoints')">
-          PowerPoints
+          Presentations
         </button>
       </div>
+
       <div id="prototypes" class="tab-content">
-        Content for prototypes goes here.
+        <div class="content-grid">
+          <!-- Card 1 -->
+          <div class="content-item">
+            <img
+              src="src/images/prototype.svg"
+              alt="Prototype Image"
+              class="card-image"
+            />
+            <h3 class="card-title">Low-Fidelity Prototype</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <!-- Card 2 -->
+          <div class="content-item">
+            <img
+              src="src/images/prototype.svg"
+              alt="Prototype Image"
+              class="card-image"
+            />
+            <h3 class="card-title">Medium-Fidelity Prototype</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+        </div>
       </div>
+
       <div id="reports" class="tab-content" style="display: none">
-        Content for reports goes here.
+        <div class="content-grid">
+          <div class="content-item">
+            <img
+              src="src/images/pdf.svg"
+              alt="Report Image"
+              class="card-image"
+            />
+            <h3 class="card-title">SPP2: P0V &amp; EXP Report</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <div class="content-item">
+            <img
+              src="src/images/pdf.svg"
+              alt="Report Image"
+              class="card-image"
+            />
+            <h3 class="card-title">
+              SPP5: Low-Fi Prototyping &amp; Pilot Usability Test Report
+            </h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+        </div>
       </div>
+
       <div id="powerpoints" class="tab-content" style="display: none">
-        Content for PowerPoints goes here.
+        <div class="content-grid">
+          <div class="content-item">
+            <img
+              src="src/images/presentation.svg"
+              alt="Presentation Image"
+              class="card-image"
+            />
+            <h3 class="card-title">SPP1 - Needfinding</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <div class="content-item">
+            <img
+              src="src/images/presentation.svg"
+              alt="Presentation Image"
+              class="card-image"
+            />
+            <h3 class="card-title">SPP2 - POV &amp; EXP</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <div class="content-item">
+            <img
+              src="src/images/presentation.svg"
+              alt="Presentation Image"
+              class="card-image"
+            />
+            <h3 class="card-title">SPP4 - Concept Video</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <div class="content-item">
+            <img
+              src="src/images/presentation.svg"
+              alt="Presentation Image"
+              class="card-image"
+            />
+            <h3 class="card-title">
+              SPP5 - Low-Fi Prototyping &amp; Pilot Usability Test
+            </h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+          <div class="content-item">
+            <img
+              src="src/images/presentation.svg"
+              alt="Presentation Image"
+              class="card-image"
+            />
+            <h3 class="card-title">SPP6 - Medium-Fidelity Prototype</h3>
+            <p class="card-description">Brief description of the prototype.</p>
+            <button class="view-button">View</button>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="conclusion" class="conclusion-section">
-      <h2>Conclusion</h2>
-      <p>Final thoughts or project summary here.</p>
-    </section>
+    <footer>
+      <p>&copy; MELO 2024</p>
+    </footer>
   </body>
 </html>
